@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToDoItem.h"
 
 @interface YUEZAddToDoItemViewController : UIViewController
+
+@property ToDoItem *toDoItem;
 
 @end
