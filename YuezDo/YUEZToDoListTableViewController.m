@@ -58,7 +58,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoItemPrototype" forIndexPath:indexPath];
     ToDoItem *item = [self.toDoItems objectAtIndex:[indexPath row]];
     cell.textLabel.text = item.itemName;
+    if ([item.completed isEqualToNumber:@1])
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else
+        cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    if ([tappedItem.completed  isEqualToNumber:@0])
+        tappedItem.completed = @1;
+    else
+        tappedItem.completed = @0;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 /*

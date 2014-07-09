@@ -51,7 +51,7 @@
         self.toDoItem = [NSEntityDescription insertNewObjectForEntityForName:@"ToDoItem"
                                                       inManagedObjectContext:self.managedObjectContext];
         self.toDoItem.itemName  = self.textField.text;
-        self.toDoItem.completed = NO;
+        self.toDoItem.completed = @0;
         NSError *error;
         if (![self.managedObjectContext save:&error])
         {
