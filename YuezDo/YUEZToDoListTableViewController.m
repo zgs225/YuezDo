@@ -7,12 +7,14 @@
 //
 
 #import "YUEZToDoListTableViewController.h"
+#import "YUEZAddToDoItemViewController.h"
 #import "YUEZAppDelegate.h"
 #import "ToDoItem.h"
 
 @interface YUEZToDoListTableViewController ()
 
 @property (nonatomic, strong) NSArray *toDoItems;
+@property (nonatomic, strong) YUEZAppDelegate *appDelegate;
 
 @end
 
@@ -30,8 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    YUEZAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    self.toDoItems = [appDelegate getAllToDoItems];
+    self.appDelegate = [[UIApplication sharedApplication] delegate];
+    self.toDoItems = [self.appDelegate getAllToDoItems];
     [self.tableView reloadData];
 }
 
@@ -127,7 +129,12 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    
+    YUEZAddToDoItemViewController *source = [segue sourceViewController];
+    if(source.toDoItem != nil)
+    {
+        self.toDoItems = [self.appDelegate getAllToDoItems];
+        [self.tableView reloadData];
+    }
 }
 
 @end
