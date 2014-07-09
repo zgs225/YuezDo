@@ -23,6 +23,8 @@
 		06D05BBE196D782B00B36715 /* YuezDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BBD196D782B00B36715 /* YuezDoTests.m */; };
 		06D05BC9196D7C3600B36715 /* YUEZAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BC8196D7C3600B36715 /* YUEZAddToDoItemViewController.m */; };
 		06D05BCC196D7C5200B36715 /* YUEZToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */; };
+		06D05BCE196D806900B36715 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D05BCD196D806900B36715 /* CoreData.framework */; };
+		06D05BD1196D863100B36715 /* YuezDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BCF196D863100B36715 /* YuezDo.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		06D05BC8196D7C3600B36715 /* YUEZAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEZAddToDoItemViewController.m; sourceTree = "<group>"; };
 		06D05BCA196D7C5200B36715 /* YUEZToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEZToDoListTableViewController.h; sourceTree = "<group>"; };
 		06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEZToDoListTableViewController.m; sourceTree = "<group>"; };
+		06D05BCD196D806900B36715 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		06D05BD0196D863100B36715 /* YuezDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YuezDo.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D05BCE196D806900B36715 /* CoreData.framework in Frameworks */,
 				06D05B95196D782B00B36715 /* CoreGraphics.framework in Frameworks */,
 				06D05B97196D782B00B36715 /* UIKit.framework in Frameworks */,
 				06D05B93196D782B00B36715 /* Foundation.framework in Frameworks */,
@@ -107,6 +112,7 @@
 		06D05B91196D782B00B36715 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06D05BCD196D806900B36715 /* CoreData.framework */,
 				06D05B92196D782B00B36715 /* Foundation.framework */,
 				06D05B94196D782B00B36715 /* CoreGraphics.framework */,
 				06D05B96196D782B00B36715 /* UIKit.framework */,
@@ -121,6 +127,7 @@
 				06D05BA1196D782B00B36715 /* YUEZAppDelegate.h */,
 				06D05BA2196D782B00B36715 /* YUEZAppDelegate.m */,
 				06D05BA4196D782B00B36715 /* Main.storyboard */,
+				06D05BCF196D863100B36715 /* YuezDo.xcdatamodeld */,
 				06D05BCA196D7C5200B36715 /* YUEZToDoListTableViewController.h */,
 				06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */,
 				06D05BC7196D7C3600B36715 /* YUEZAddToDoItemViewController.h */,
@@ -265,6 +272,7 @@
 				06D05BCC196D7C5200B36715 /* YUEZToDoListTableViewController.m in Sources */,
 				06D05B9F196D782B00B36715 /* main.m in Sources */,
 				06D05BA3196D782B00B36715 /* YUEZAppDelegate.m in Sources */,
+				06D05BD1196D863100B36715 /* YuezDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +477,7 @@
 				06D05BC3196D782B00B36715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06D05BC4196D782B00B36715 /* Build configuration list for PBXNativeTarget "YuezDoTests" */ = {
 			isa = XCConfigurationList;
@@ -477,8 +486,22 @@
 				06D05BC6196D782B00B36715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		06D05BCF196D863100B36715 /* YuezDo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				06D05BD0196D863100B36715 /* YuezDo.xcdatamodel */,
+			);
+			currentVersion = 06D05BD0196D863100B36715 /* YuezDo.xcdatamodel */;
+			path = YuezDo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 06D05B87196D782B00B36715 /* Project object */;
 }
