@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Add TODO Item-->
+        <!--Add To Do Item View Controller - Add TODO Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="YUEZViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="YUEZAddToDoItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="100" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -31,18 +31,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add TODO Item" id="zsU-jt-U2Y">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aMz-gM-C2b"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fr6-Em-cpB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aMz-gM-C2b">
+                            <connections>
+                                <segue destination="YdK-SF-gEf" kind="unwind" unwindAction="unwindToList:" id="5mA-7q-xOz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fr6-Em-cpB">
+                            <connections>
+                                <segue destination="YdK-SF-gEf" kind="unwind" unwindAction="unwindToList:" id="NkK-Rc-0Uu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="YdK-SF-gEf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1681" y="68"/>
         </scene>
-        <!--Table View Controller - YuezDo-->
+        <!--To Do List Table View Controller - YuezDo-->
         <scene sceneID="fuM-DS-lwa">
             <objects>
-                <tableViewController id="NdI-Vf-HOE" sceneMemberID="viewController">
+                <tableViewController id="NdI-Vf-HOE" customClass="YUEZToDoListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IRs-9t-X3a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
