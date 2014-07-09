@@ -7,8 +7,12 @@
 //
 
 #import "YUEZToDoListTableViewController.h"
+#import "YUEZAppDelegate.h"
+#import "ToDoItem.h"
 
 @interface YUEZToDoListTableViewController ()
+
+@property (nonatomic, strong) NSArray *toDoItems;
 
 @end
 
@@ -26,12 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    YUEZAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.toDoItems = [appDelegate getAllToDoItems];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +45,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.toDoItems count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoItemPrototype" forIndexPath:indexPath];
+    ToDoItem *item = [self.toDoItems objectAtIndex:[indexPath row]];
+    cell.textLabel.text = item.itemName;
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

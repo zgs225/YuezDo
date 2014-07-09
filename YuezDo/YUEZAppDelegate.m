@@ -53,6 +53,16 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
 }
 
+- (NSArray *)getAllToDoItems
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity  = [NSEntityDescription entityForName:@"ToDoItem"
+                                               inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    return [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

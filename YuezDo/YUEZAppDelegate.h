@@ -17,4 +17,6 @@
 @property (readonly, retain, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, retain, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+- (NSArray *)getAllToDoItems;
+
 @end
