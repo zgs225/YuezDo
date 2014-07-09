@@ -25,6 +25,7 @@
 		06D05BCC196D7C5200B36715 /* YUEZToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */; };
 		06D05BCE196D806900B36715 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D05BCD196D806900B36715 /* CoreData.framework */; };
 		06D05BD1196D863100B36715 /* YuezDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BCF196D863100B36715 /* YuezDo.xcdatamodeld */; };
+		06D05BD4196D87C700B36715 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D05BD3196D87C700B36715 /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEZToDoListTableViewController.m; sourceTree = "<group>"; };
 		06D05BCD196D806900B36715 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		06D05BD0196D863100B36715 /* YuezDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YuezDo.xcdatamodel; sourceTree = "<group>"; };
+		06D05BD2196D87C700B36715 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		06D05BD3196D87C700B36715 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				06D05BA2196D782B00B36715 /* YUEZAppDelegate.m */,
 				06D05BA4196D782B00B36715 /* Main.storyboard */,
 				06D05BCF196D863100B36715 /* YuezDo.xcdatamodeld */,
+				06D05BD2196D87C700B36715 /* ToDoItem.h */,
+				06D05BD3196D87C700B36715 /* ToDoItem.m */,
 				06D05BCA196D7C5200B36715 /* YUEZToDoListTableViewController.h */,
 				06D05BCB196D7C5200B36715 /* YUEZToDoListTableViewController.m */,
 				06D05BC7196D7C3600B36715 /* YUEZAddToDoItemViewController.h */,
@@ -269,6 +274,7 @@
 			files = (
 				06D05BC9196D7C3600B36715 /* YUEZAddToDoItemViewController.m in Sources */,
 				06D05BA9196D782B00B36715 /* YUEZViewController.m in Sources */,
+				06D05BD4196D87C700B36715 /* ToDoItem.m in Sources */,
 				06D05BCC196D7C5200B36715 /* YUEZToDoListTableViewController.m in Sources */,
 				06D05B9F196D782B00B36715 /* main.m in Sources */,
 				06D05BA3196D782B00B36715 /* YUEZAppDelegate.m in Sources */,
